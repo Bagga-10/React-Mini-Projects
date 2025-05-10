@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: black;
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  
+
+  .accordion-heading {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #ffa31a;
+    animation: bounce 1s ease infinite;
+  }
+
+  @keyframes bounce {
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    
+  }
+
+  .accordion-card {
+    margin: 20px 0;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    background-color: #2e2e2e;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+  }
+  
+  .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffa31a;
+  }
+  
+  .icon {
+    font-size: 1.5rem;
+    color: #ffa31a;
+  }
+  
+  .accordion-content {
+    padding-top: 15px;
+    color: #ddd;
+  }
+  
+  .accordion-text {
+    line-height: 1.5;
+    font-size: 1rem;
+    padding-right: 10px;
+  }
+  
+  .accordion-card:hover {
+    background-color: #3b3b3b;
+  }
+  
+  @media (max-width: 600px) {
+    .accordion-card {
+      padding: 15px;
+    }
+  
+    .accordion-header {
+      font-size: 1rem;
+    }
+  
+    .accordion-text {
+      font-size: 0.95rem;
+    }
+  }
+  
